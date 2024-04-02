@@ -1,0 +1,50 @@
+# Исключить файлы сборки
+Debug/
+Debug_old/
+Release/
+x64/
+x86/
+build/
+out/
+airflow_lib/Debug/
+
+# Исключить все файлы .sdf
+*.sdf
+
+# Исключить все файлы .opensdf
+*.opensdf
+
+# Исключить файлы .user и .userosscache
+*.user
+*.userosscache
+
+# Исключить файлы .vs
+.vs/
+
+# Исключить файлы .VC.db
+*.VC.db
+
+# Исключить файлы .VC.VC.opendb
+*.VC.VC.opendb
+
+# Исключить файлы и директории ipch (Precompiled Headers)
+ipch/
+*.ipch
+
+# Исключить автоматически создаваемые файлы Browse
+*.aps
+*.ncb
+*.opendb
+*.opensdf
+
+# Исключить файлы .suo
+*.suo
+
+# Исключить файлы резервного копирования
+*.[Bb][Aa][Kk]
+
+# Исключить резервные копии папок
+[Bb]ackup*/
+
+# Исключить папки .vscode (если используется VS Code в качестве редактора)
+.vscode/
