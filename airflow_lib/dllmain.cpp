@@ -202,7 +202,9 @@ __declspec(dllexport) double __cdecl calc_airflow_mu(double p_izm, double dp_izm
 
     double T = t + 273.15;  // Термодинамическая температура газа, К (ГОСТ 8.586.5 п.6.3.1)
 
-    double u = 18.27 * 1e-6 * ((291.15 + 120) / (T + 120)) * pow((T / 291.15), (3 / 2.));
+    // динамическая вязкость воздуха, апроксимация табличных значений полиномом 4й степени: 
+    // http://thermalinfo.ru/svojstva-gazov/gazovye-smesi/fizicheskie-svojstva-vozduha-plotnost-vyazkost-teploemkost-entropiya
+    double u = (-4e-12 * pow(t, 4) + 2e-8 * pow(t, 3) - 3e-5 * pow(t, 2) + 0.0494 * t + 17.219) * 1e-6;
 
     // показатель адиабаты воздуха при измеренной температуре (апроксимация табличных значений полиномом 4й степени)
     double k = -1E-13 * pow(t, 4) + 4E-10 * pow(t, 3) - 3E-07 * pow(t, 2) - 9E-06 * t + 1.4011;
